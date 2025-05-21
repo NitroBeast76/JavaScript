@@ -4,50 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            margin: 30px;
-            background-color: #f8f9fa;
-            line-height: 1.5;
-            max-width: 600px;
-            margin: 20px auto;
-        }
-
-        h2 {
-            color: #1a1a1a;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #007BFF;
-        }
-
-        p {
-            margin: 15px 0;
-            padding: 12px;
-            background: white;
-            border-radius: 4px;
-        }
-
-        button {
-            padding: 10px 18px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        button:hover {
-            opacity: 0.9;
-        }
-
-        #myImage {
-            width: 100px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-    </style>
-
 </head>
 <body>
     <h2>What Can JavaScript Do?</h2>
@@ -94,5 +50,25 @@
     onclick="document.getElementById('demo5').style.display='block'">
         Show!
     </button>
+
+    <p id="demo6"></p>
+
+    <p>Never call document.write after the document has finished loading. It will overwrite the whole document.</p>
+
+    <button type="button" onclick="document.write(5 + 6)">
+        Click Me!
+    </button>
+
+    <h2>Activate Debugging</h2>
+
+    <p>F12 on your keyboard will activate debugging.</p>
+    <p>Then select "Console" in the debugger menu.</p>
+    <p>Then click Run again.</p>
+
+    <script>
+        document.getElementById("demo6").innerHTML = "<h2>Hello World!</h2>";
+        // window.alert("Hello! You are cooked!");
+        console.log("Hello! You are cooked!");
+    </script> 
 </body>
 </html>

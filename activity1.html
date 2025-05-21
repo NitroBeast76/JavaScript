@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First JS Page</title>
+    <script>
+        window.alert("Greetings and Salutations!");
+
+        console.log("Pineapple on pizza is a crime!");
+
+
+        document.write("I LOVE PIZZA!!!");
+
+
+        function changeText() {
+            document.getElementById("myParagraph").innerHTML = "<h2>You have been condemned to a thousand RickRolls.</h2>";
+        }
+        function changeText_2() {
+            document.getElementById("2nd").innerHTML = "<h2>Your are blessed with the gift of a thousand RickRolls. *hehehehe*  </h2>";
+        }
+        function changeText_3() {
+            document.getElementById("3rd").src='Images/bulbon.jpg';
+        }
+        function changeText_4() {
+            document.getElementById("3rd").src='Images/bulboff.jpg';
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript is so Cool</h1>
+    <p>Open the console to see more....</p>
+
+    <p id="first"></p>
+
+    <button onclick="document.getElementById('first')">
+        Click Me!
+    </button>
+
+    <p id="myParagraph"> The text will change when you click the button.</p>
+
+    <button onclick="changeText()">Pretty Button here!!</button>
+
+    <p id="2nd">This is the second paragraph. Click to find the next message</p>
+
+    <button onclick="changeText_2()">Another Pretty Button here!!</button>
+
+    <br>
+
+    <img id="3rd" src="Images/bulboff.jpg" style="width:100px">
+
+    <button onclick="changeText_3()">Turn on the lightsss!!!!!!!!!!!!!!</button>
+
+    <button onclick="changeText_4()">Turn off the lightsss!!!!!!!!!!!!!!</button>
+</body>
+</html>
