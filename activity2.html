@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Soccer Site</title>
+    <script>
+        function CSSchange() {
+            document.getElementById("introduction").style.backgroundColor = "#e0f7fa";
+            document.getElementById("introduction").style.color = "#00695c";
+            document.getElementById("introduction").style.fontSize = "20px";
+        }
+
+        function textchange() {
+            document.getElementById("rules").innerHTML = "<h2>ANYTHING THE REFEREE SAYS GOES!!!!</h2>";
+        }
+
+        function questionAboutFavPlayer() {
+            let FavPlayer = prompt("Who is your favorite soccer player?");
+            if (FavPlayer) {
+                document.getElementById("question").innerHTML = "Your favorite player is " + FavPlayer + "." + "That's Great!";
+            }
+        }
+
+        function math_eww() {
+            // The link is https://www.programiz.com/javascript/examples/area-triangle, go to where it says "Example 1: Area When Base and Height is Known" 
+            const baseValue = prompt("Enter the base of the triangle:"); //sets a constant for the prompt for the base
+            const heightValue = prompt("Enter the height of the triangle:");  //sets a constant for the prompt for the height
+
+            const areaValue = (baseValue * heightValue) / 2; //calculates the area of the triangle using answers for the prompts
+
+            document.getElementById("math").innerHTML = "The area of the triangle is: " + areaValue; //displays the area of the triangle in the mth id paragraph
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+
+        header {
+            background-color: #228B22;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #228B22;
+            border-left: 5px solid #228B22;
+            padding-left: 10px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 8px;
+            border: 2px solid #228B22;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>What is Soccer?</h1>
+    </header>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Soccer is the world's most popular sport, played by over 250 million players in 200+ countries. The game is known for its simple rules and universal appeal.</p>
+        <button onclick="CSSchange()">Change CSS</button>
+    </section>
+
+    <img src="Images/soccer-players.jpg" id="soccer-players"
+        alt="Soccer players in action">
+
+    <section id="rules">
+        <h2>Main Rules</h2>
+        <ul>
+            <li>Match duration: 90 minutes (two 45-minute halves)</li>
+            <li>Ball out of play results in throw-in or corner kick</li>
+            <li>Yellow/red card system for fouls</li>
+            <li>Offside rule prevents goal-hanging</li>
+        </ul>
+        <button onclick="textchange()">Change Rules Text</button>
+    </section>
+
+    <img src="Images/soccer-ball.jpg"  id="soccer-ball"
+        alt="Soccer ball">
+
+    <section>
+        <h2>Equipment Needed</h2>
+        <ul>
+            <li>Soccer ball</li>
+            <li>Goals/net</li>
+            <li>Shin guards</li>
+            <li>Cleats</li>
+            <li>Field markers</li>
+        </ul>
+    </section>
+
+    <button onclick="questionAboutFavPlayer()">QUESTION FINE SIR!!!!</button>
+
+    <p id="question"></p>
+
+    <p id="math">Click the button to calculate the area of a triangle.</p>
+    <button onclick="math_eww()">Calculate Area</button>
+
+
+    <footer>
+        <p>Simple Soccer Guide | Learn the fundamentals of the game</p>
+    </footer>
+</body>
+</html>
